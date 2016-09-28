@@ -40,12 +40,14 @@ import string
 import collections
 from string import ascii_lowercase
 from string import ascii_letters
+import alphebet
 
 start = input(" Please enter a string of text (the bigger the better): ")
 print("The distribution of characters in " '"' + start + '"'". is: ")
 
 d = collections.defaultdict(int)
-for c in start:
+p = start.lower()
+for c in p:
     d[c] += 1
-for c in sorted(d, key=d.get, reverse=True):
-    print (c, (d*c))
+for c in sorted(ascii_lowercase, key=d.get, reverse=True):
+    print (c*d[c])
