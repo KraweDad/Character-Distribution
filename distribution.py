@@ -44,13 +44,19 @@ from string import ascii_letters
 start = input(" Please enter a string of text (the bigger the better): ")
 print("The distribution of characters in " '"' + start + '"'". is: ")
 
-d = collections.defaultdict(int)
 p = start.lower()
+w = p.replace(" ","")
 ll= []
+d = collections.defaultdict(int)
 
-for c in p:
-    d[c] += 1
-for c in sorted(ascii_lowercase, key=d.get, reverse=True):
-    ll.append((c, d[c]))
-for ll in sorted(p):
-    print (ll*d[ll])
+for k in w:
+    d[k] += 1
+lol = sorted(d.items())
+
+y= 100
+x = lol[1]
+if x < y:
+    y == y-1
+if x == y:
+    print(x*x[d])
+ 
