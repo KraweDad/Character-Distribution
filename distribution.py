@@ -1,7 +1,7 @@
 """
 distribution.py
-Author: <your name here>
-Credit: <list sources used, if any>
+Author: Matthew
+Credit: Robbie
 
 Assignment:
 
@@ -45,7 +45,9 @@ start = input(" Please enter a string of text (the bigger the better): ")
 print("The distribution of characters in " '"' + start + '"'". is: ")
 
 p = start.lower()
-w = p.replace(" ","")
+g = p.replace(" ","")
+w = filter(str.isalpha,g)
+
 ll= []
 d = collections.defaultdict(int)
 
@@ -53,10 +55,8 @@ for k in w:
     d[k] += 1
 lol = sorted(d.items())
 
-y= 100
-x = lol[1]
-if x < y:
-    y == y-1
-if x == y:
-    print(x*x[d])
+for x in range(100, 0, -1):
+    for h in lol:
+        if h[1] == x:
+            print(h[0]*h[1])
  
