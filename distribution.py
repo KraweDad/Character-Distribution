@@ -42,7 +42,7 @@ from string import ascii_lowercase
 from string import ascii_letters
 
 start = input(" Please enter a string of text (the bigger the better): ")
-print("The distribution of characters in " '"' + start + '"'" is: ")
+print("The distribution of characters in " '"' + start + '"'" is:")
 
 p = start.lower()
 g = p.replace(" ","")
